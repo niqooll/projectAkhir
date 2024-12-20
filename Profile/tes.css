@@ -1,0 +1,507 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: black;
+}
+
+/* Navbar Start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #010101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #010101;
+  color: #007398;
+}
+
+.navbar .navbar-nav {
+  padding-left: 20%;
+}
+/* Navbar End */
+
+/* Navbar-bar Start */
+.navbar .navbar-nav a {
+  color: #010101;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 2rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #007398;
+}
+.navbar .navbar-nav a.active {
+  color: #010101;
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #007398;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Navbar-bar End */
+
+/* Navbar-extra Start*/
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-extra a {
+  color: #010101;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+}
+
+.navbar-extra span .img1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #007398;
+}
+
+.navbar .navbar-extra a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #007398;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a:hover::after {
+  transform: scaleX(0.5);
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Navbar-extra End*/
+
+/* pop up start */
+.popup {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  height: 230px;
+  width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
+  color: #007398;
+}
+
+h3 {
+  font-size: 30px;
+}
+.popup-content p {
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #010101;
+}
+
+.popup-content .button {
+  color: #010101;
+  border: 1px solid;
+  padding: 3px 50px;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.popup-content .button:hover {
+  color: #fff;
+  background-color: #007398;
+}
+
+/* hero section */
+
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  color: #000000;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.account-management {
+  background-color: white;
+  padding: 15px 0px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: #007398;
+}
+aside {
+  flex: 1;
+  margin-right: 20px;
+  position: fixed;
+  top: 200px;
+  width: 200px;
+  background-color: white;
+}
+
+aside ul {
+  list-style: none;
+  color: #000000;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000000;
+}
+
+aside li.active {
+  background-color: #007398;
+  color: white;
+  font-size: 17px;
+}
+
+.details {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 270px; /* Adjust this value based on the width of the aside element */
+  max-width: 2000px;
+}
+
+.details div {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.details .didikin-title {
+  background-color: #dbdbdb;
+  width: 400px;
+  height: 300px;
+}
+.details .didikin-title h2 {
+  font-size: 30px;
+  margin: 50px 0px 30px 0px;
+}
+
+.details .didikin-title p {
+  font-size: 15px;
+}
+
+.details .didikin-detail {
+  background-color: rgb(240, 240, 240);
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.details .input-group {
+  font-size: 12px;
+  max-width: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.details input {
+  font-size: 15px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid;
+  text-align: center;
+  border-radius: 20px;
+}
+
+/* General container styling */
+.details1 {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 270px; /* Adjust this value based on the width of the aside element */
+  max-width: 2000px;
+}
+
+.details1 div {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.details1 .didikin-title1 {
+  background-color: #dbdbdb;
+  width: 400px;
+  height: 450px;
+}
+.details1 .didikin-title1 h2 {
+  font-size: 30px;
+  margin: 100px 0px 30px 0px;
+}
+
+.details1 .didikin-title1 p {
+  font-size: 15px;
+}
+.container1 {
+  background-color: rgb(240, 240, 240);
+  width: 500px;
+  height: 450px;
+}
+
+/* Heading styling */
+.container1 h2 {
+  text-align: center;
+}
+
+/* Form group styling */
+.container1 .form-group {
+  margin-bottom: 10px;
+}
+
+/* Label styling */
+.container1 .form-group label {
+  display: block;
+}
+
+/* Input field styling */
+.container1 .form-group input {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styling */
+.container1 button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container1 button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* General container styling */
+.details2 {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 270px; /* Adjust this value based on the width of the aside element */
+  max-width: 2000px;
+}
+
+.details2 div {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.details2 .didikin-title2 {
+  background-color: #dbdbdb;
+  width: 400px;
+  height: 670px;
+}
+.details2 .didikin-title2 h2 {
+  font-size: 30px;
+  margin: 250px 0px 30px 0px;
+}
+
+.details2 .didikin-title2 p {
+  font-size: 15px;
+}
+.container2 {
+  background-color: rgb(240, 240, 240);
+  width: 500px;
+  height: 670px;
+}
+
+/* Heading styling */
+.container2 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Profile picture container styling */
+.profile-picture-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile-picture-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+/* Form group styling */
+.container2 .form-group {
+  margin-bottom: 0px;
+}
+
+/* Label styling */
+.container2 .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input field styling */
+.container2 .form-group input,
+.container2 .form-group textarea {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Textarea styling */
+.container2 .form-group textarea {
+  resize: vertical;
+}
+
+/* File input styling */
+.container2 .form-group input[type="file"] {
+  padding: 3px;
+}
+
+/* Button styling */
+.container2 button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container2 button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.details3 {
+  display: flex;
+  margin-top: 50px;
+  margin-left: 270px; /* Adjust this value based on the width of the aside element */
+  max-width: 2000px;
+}
+
+.details3 div {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.details3 .didikin-title3 {
+  background-color: #dbdbdb;
+  width: 400px;
+  height: 180px;
+}
+.details3 .didikin-title3 h2 {
+  font-size: 30px;
+}
+
+.details3 .didikin-title3 p {
+  font-size: 15px;
+}
+
+.details3 .didikin-detail3 {
+  background-color: rgb(240, 240, 240);
+  width: 500px;
+  height: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.details3 .input-group3 a {
+  font-size: 18px;
+  color: #000000;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.details3 .input-group3 a :hover {
+  background-color: #0056b3;
+}
+
+/* Footer Start */
+.closeEnd .footer1 {
+  padding: 30px;
+  background-color: rgb(65, 176, 212);
+  text-align: center;
+  border-bottom: 1px solid #010101;
+  width: 100%;
+}
+
+.closeEnd .footer1 p {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 69vh;
+}
+
+.closeEnd .footer1 a {
+  color: black;
+  margin: 10px;
+  padding-top: 50px;
+}
+
+.closeEnd .footer2 {
+  background-color: rgb(65, 176, 212);
+  text-align: center;
+  padding: 20px;
+}

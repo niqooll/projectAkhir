@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: black;
+  background-image: url("../Home/img/5570027.jpg");
+  /* min-height: 2000px; */
+}
+
+/* Popup container */
+.popup {
+  display: none; /* Sembunyikan popup secara default */
+  position: fixed; /* Tetapkan posisi popup */
+  top: 0;
+  left: 0;
+  width: 100%; /* Lebar popup */
+  height: 100%; /* Tinggi popup */
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang transparan */
+  z-index: 999; /* Indeks z agar popup muncul di atas elemen lain */
+}
+
+/* Konten popup */
+.popup-content {
+  background-color: #fefefe; /* Warna latar belakang konten */
+  margin: 10% auto; /* Atur jarak margin untuk konten */
+  padding: 20px;
+  border: 1px solid #888; /* Tambahkan border */
+  width: 50%; /* Lebar konten popup */
+  max-width: 600px; /* Lebar maksimum konten */
+  position: relative; /* Tetapkan posisi relatif */
+}
+
+/* Tombol close */
+.close {
+  position: absolute; /* Tetapkan posisi absolut */
+  top: 10px; /* Atur jarak dari atas */
+  right: 10px; /* Atur jarak dari kanan */
+  font-size: 20px; /* Ukuran font */
+  font-weight: bold; /* Berat font */
+  cursor: pointer; /* Ubah kursor menjadi pointer saat mengarahkan ke tombol */
+}
+
+/* Navbar Start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #010101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #010101;
+  color: #007398;
+}
+
+.navbar .navbar-nav {
+  padding-left: 20%;
+}
+/* Navbar End */
+
+/* Navbar-bar Start */
+.navbar .navbar-nav a {
+  color: #010101;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 2rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #007398;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #007398;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Navbar-bar End */
+
+/* Navbar-extra Start*/
+.navbar .navbar-extra a {
+  color: #010101;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a span {
+  padding-left: 1rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #007398;
+}
+
+.navbar .navbar-extra a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #007398;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a:hover::after {
+  transform: scaleX(0.5);
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* Navbar-extra End*/
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/* Handphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Hero Section Start */
+.titleHero {
+  margin: 25vh 50vh 10vh 50vh;
+  text-align: center;
+}
+.titleHero h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 40px;
+  background-color: #007398;
+  border-radius: 18px;
+  margin: 0px 35vh;
+}
+.titleHero p {
+  font-size: 20px;
+  margin: 10px 60px;
+  font-weight: 600;
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+.hero {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 20%;
+}
+.flex-box {
+  width: 340px;
+  height: 455px;
+  border-radius: 15px;
+  display: flex;
+  background-color: #eeeeee;
+}
+
+.flex-box1 {
+  width: 300px;
+  height: 420px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.explain {
+  font-size: 16px;
+  margin: 0px 50px;
+  text-align: center;
+}
+
+.logo {
+  width: 70px;
+  margin: 115px;
+}
+.logo1 {
+  width: 110px;
+  margin: 127px 95px;
+}
+.logo2 {
+  width: 80px;
+
+  margin: 115px 110px;
+}
+
+.explain p {
+  margin-bottom: 10px;
+}
+.explain a {
+  padding: 5px 20px;
+  background-color: #007398;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 10px;
+}
+
+.explain a:hover {
+  background-color: #05607e;
+}
+/* Hero Section End */
+
+.boxClass {
+  margin: 200px 0px;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxCover {
+  width: 75%;
+  height: 350px;
+  justify-content: space-between;
+  background-color: #007398;
+  border-radius: 25px;
+}
+.boxContent {
+  width: 80%;
+  margin: 90px auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.boxContent h1 {
+  font-size: 30px;
+}
+
+.boxContent i {
+  color: #010101;
+  font-size: 110px;
+  margin: 25px;
+}
+.boxContent ul {
+  list-style: none;
+  padding: 10px;
+  font-size: 15px;
+}
+
+/* Footer Start */
+.closeEnd .footer1 {
+  padding: 30px;
+  background-color: rgb(65, 176, 212);
+  text-align: center;
+  border-bottom: 1px solid #010101;
+}
+
+.closeEnd .footer1 p {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 69vh;
+}
+
+.closeEnd .footer1 a {
+  color: black;
+  margin: 10px;
+  padding-top: 50px;
+}
+
+.closeEnd .footer2 {
+  background-color: rgb(65, 176, 212);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Footer End */

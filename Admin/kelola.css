@@ -1,0 +1,294 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Start */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #010101;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007398;
+}
+
+.navbar .navbar-nav {
+  padding-left: 20%;
+}
+
+.navbar .navbar-nav a {
+  color: #010101;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 2rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #007398;
+}
+
+.navbar .navbar-nav a.active {
+  color: #010101;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #007398;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* Navbar-extra Start */
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center;
+  position: relative; /* For positioning the dropdown correctly */
+}
+
+.navbar .navbar-extra a {
+  color: #010101;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+}
+
+.navbar .navbar-extra a span {
+  padding-left: 1rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #007398;
+}
+
+.navbar .navbar-extra a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #007398;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.fotoProfile1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  margin-left: 10px;
+}
+
+.navbar-extra .Profile {
+  color: #010101;
+  text-decoration: none;
+  cursor: pointer; /* To indicate that it's clickable */
+}
+
+.navbar-extra .dropdown1 {
+  display: none;
+  position: absolute;
+  right: 0; /* Align to the right of the navbar-extra */
+  top: 60px; /* Adjust as needed to position below the Profile */
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.navbar-extra .dropdown1 li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.navbar-extra .dropdown1 li a {
+  color: #010101;
+  text-decoration: none;
+  display: block; /* Make the entire area clickable */
+  padding: 5px 10px; /* Add padding for better clickability */
+}
+
+.navbar-extra .dropdown1 li a:hover {
+  background-color: #f4f4f4; /* Change background on hover */
+}
+
+.navbar-extra:hover .dropdown1 {
+  display: block;
+}
+
+/* Additional styles */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #00b8d4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0097a7;
+}
+
+.announcement-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.announcement-table th,
+.announcement-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  background-color: #4caf50;
+}
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.edit-btn:hover {
+  background-color: #388e3c;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.announcement-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.announcement-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.announcement-item p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.announcement-item small {
+  color: #999;
+  font-size: 12px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content h3 {
+  margin: 0 0 10px;
+}
+
+.popup-content p {
+  margin: 0 0 20px;
+}
+
+.popup-content .button {
+  padding: 10px 20px;
+  background-color: #00b8d4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.popup-content .button:hover {
+  background-color: #0097a7;
+}
